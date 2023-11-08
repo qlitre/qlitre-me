@@ -5,7 +5,7 @@
   },
   "dependencies": {
     "@types/marked": "^5.0.2",
-    "hono": "^3.7.2",
+    "hono": "^3.9.2",
     "marked": "^9.0.3"
   },
   "devDependencies": {

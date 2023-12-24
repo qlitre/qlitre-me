@@ -1,45 +1,46 @@
-import { html, raw } from 'hono/html'
-import { getContentFromKVAsset } from 'hono/utils/cloudflare'
-import { getFilePath } from 'hono/utils/filepath'
-import { bufferToString } from 'hono/utils/buffer'
-import { marked } from 'marked'
+import { html } from 'hono/html'
 import { MiddlewareHandler } from 'hono'
 
 import { Header } from './components/Header'
 import { Footer } from './components/Footer'
 
 export type SiteData = {}
-// @ts-ignore
-import manifest from '__STATIC_CONTENT_MANIFEST'
 
-export const renderer = (filename: string, data: SiteData): MiddlewareHandler => {
-    return async (c, next) => {
-        const path = getFilePath({
-            filename: filename,
-            root: './contents',
-        })
-        const content = await getContentFromKVAsset(path!, {
-            namespace: c.env.__STATIC_CONTENT,
-            manifest: manifest,
-        })
-        if (content) {
-            const text = bufferToString(content)
-            const body = marked(text)
-            const html = Layout(body, data)
-            return c.html(html)
-        }
+export const body = () => {
+    return (
+        <div><p>Hello, It's Qlitre's site like portfolio.</p>
+            <h2>About</h2>
+            <ul>
+                <li>Is sunday programmer</li>
+                <li>Working in public limited company</li>
+                <li>Love with <code>柴田聡子</code> and <code>paiko fried rice</code></li>
+            </ul>
+            <h2>Link</h2>
+            <ul>
+                <li><a href="https://qlitre-dialy.ink/">日記サイト(Hono)</a></li>
+                <li><a href="https://qlitre-weblog.com/">プログラミングブログ(Nuxt.js)</a></li>
+                <li><a href="https://github.com/qlitre">GitHub</a></li>
+                <li><a href="https://atcoder.jp/users/Qlitre">AtCoder</a></li>
+                <li><a href="https://twitter.com/kuri_tter">X / @kuri_tter</a></li>
+            </ul>
+        </div>
+    )
+}
 
-        await next()
+export const renderer = (data: SiteData): MiddlewareHandler => {
+    return async (c) => {
+        const html = Layout(body(), data)
+        return c.html(html)
     }
 }
 
-export const Layout = (body: string, data: SiteData) => {
+export const Layout = (body: JSX.Element, data: SiteData) => {
     const App = () => {
         return (
             <div class="container">
                 <Header />
                 <div>
-                    {raw(body)}
+                    {body}
                 </div>
                 <Footer />
             </div>
@@ -62,7 +63,7 @@ export const Layout = (body: string, data: SiteData) => {
             <meta property="og:image" content="https://qlitre.me/static/image/myprof.jpeg" />
             <meta property="og:site_name" content="Qlitre.Me" />
             <meta property="og:locale" content="ja_JP" />
-            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:card" content="summary" />
             <meta name="twitter:site" content="@kuri_tter" />
             <meta name="twitter:creator" content="@kuri_tter" />
         </head>

@@ -6,6 +6,5 @@ const app = new Hono()
 
 app.use('/static/*', serveStatic({ root: './' }))
 app.use('/favicon.ico', serveStatic({ path: './favicon.ico' }))
-app.get('/', renderer('about.md', {}))
-
+app.get('/', renderer({}))
 export default app

@@ -4,7 +4,9 @@ export const Header = () => {
         <header class="header">
             <h1 class="siteTitle">qltre.me</h1>
             <nav class="navigations">
-                <a class="navigationLink" href="https://github.com/qlitre/qlitre-me">GitHub</a>
+                <a class="navigationLink" href="https://github.com/qlitre/qlitre-me" target="_blank" rel="noopener noreferrer">
+                    GitHub
+                </a>
             </nav>
         </header>
     );

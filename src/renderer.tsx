@@ -17,11 +17,11 @@ export const body = () => {
             </ul>
             <h2>Link</h2>
             <ul>
-                <li><a href="https://qlitre-dialy.ink/">日記サイト(Hono)</a></li>
-                <li><a href="https://qlitre-weblog.com/">プログラミングブログ(Nuxt.js)</a></li>
-                <li><a href="https://github.com/qlitre">GitHub</a></li>
-                <li><a href="https://atcoder.jp/users/Qlitre">AtCoder</a></li>
-                <li><a href="https://twitter.com/kuri_tter">X / @kuri_tter</a></li>
+                <li><a href="https://qlitre-dialy.ink/" target="_blank" rel="noopener noreferrer">日記サイト(Hono)</a></li>
+                <li><a href="https://qlitre-weblog.com/" target="_blank" rel="noopener noreferrer">プログラミングブログ(Nuxt.js)</a></li>
+                <li><a href="https://github.com/qlitre" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                <li><a href="https://atcoder.jp/users/Qlitre" target="_blank" rel="noopener noreferrer">AtCoder</a></li>
+                <li><a href="https://twitter.com/kuri_tter" target="_blank" rel="noopener noreferrer">X / @kuri_tter</a></li>
             </ul>
         </div>
     )

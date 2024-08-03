@@ -42,6 +42,8 @@ const Body = () => (
         <a href="https://twitter.com/kuri_tter" target="_blank" rel="noopener noreferrer">
           X / @kuri_tter
         </a>
+      </li>
+      <li>
         <a href="https://home-loan-calculator.pages.dev/" target="_blank" rel="noopener noreferrer">
           住宅ローン簡易計算サイト
         </a>

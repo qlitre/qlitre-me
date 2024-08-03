@@ -1,8 +1,9 @@
 import { Hono } from 'hono'
 import { renderer } from './renderer'
+import { serveStatic } from 'hono/cloudflare-pages'
 
 const app = new Hono()
-
+app.use('/favicon.ico', serveStatic())
 app.use(renderer)
 
 const Body = () => (

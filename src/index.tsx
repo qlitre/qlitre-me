@@ -48,6 +48,11 @@ const Body = () => (
           住宅ローン簡易計算サイト
         </a>
       </li>
+      <li>
+        <a href='https://green-diary.pages.dev/' target="_blank" rel="noopener noreferrer">
+          植物成長記録サイト
+        </a>
+      </li>
     </ul>
   </div>
 );

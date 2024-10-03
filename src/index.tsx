@@ -20,7 +20,7 @@ const Body = () => (
     <ul>
       <li>
         <a href="https://qlitre-dialy.ink/" target="_blank" rel="noopener noreferrer">
-          日記サイト(Hono)
+          日記サイト(HonoX)
         </a>
       </li>
       <li>

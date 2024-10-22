@@ -49,7 +49,7 @@ const Body = () => (
         </a>
       </li>
       <li>
-        <a href='https://green-diary.pages.dev/' target="_blank" rel="noopener noreferrer">
+        <a href='https://green-log.pages.dev/' target="_blank" rel="noopener noreferrer">
           植物成長記録サイト
         </a>
       </li>

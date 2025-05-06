@@ -1,14 +1,26 @@
-import build from '@hono/vite-cloudflare-pages'
-import devServer from '@hono/vite-dev-server'
-import adapter from '@hono/vite-dev-server/cloudflare'
+import { cloudflare } from '@cloudflare/vite-plugin'
+import build from '@hono/vite-build/cloudflare-workers'
 import { defineConfig } from 'vite'
+import ssrHotReload from 'vite-plugin-ssr-hot-reload'
 
-export default defineConfig({
-  plugins: [
-    build(),
-    devServer({
-      adapter,
-      entry: 'src/index.tsx'
-    })
-  ]
+export default defineConfig(({ command, isSsrBuild }) => {
+  if (command === 'serve') {
+    return { plugins: [ssrHotReload(), cloudflare()] }
+  }
+  if (!isSsrBuild) {
+    return {
+      build: {
+        rollupOptions: {
+         input: ['./public/static/css/style.css'],
+          output: {
+            assetFileNames: 'assets/[name].[ext]'
+          }
+        }
+      }
+    }
+  }
+  // SSRビルドの設定はそのまま
+  return {
+    plugins: [build({ outputDir: 'dist-server' })]
+  }
 })

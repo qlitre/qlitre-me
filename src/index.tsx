@@ -71,7 +71,17 @@ const Body = () => (
         >
           住宅ローン簡易計算サイト
         </a>
+      </li>      
+      <li>
+        <a
+          href="https://recipes.qlitre.workers.dev/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          レシピ記録（HonoX mdx）
+        </a>
       </li>
+
     </ul>
   </div>
 );

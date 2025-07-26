@@ -80,17 +80,7 @@ const Body = () => (
         >
           レシピ記録（HonoX mdx）
         </a>
-      </li>
-      <li>
-        <a
-          href="https://video-keeper-x.qlitre.workers.dev/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Xライブ動画検索
-        </a>
-      </li>
-
+      </li>      
     </ul>
   </div>
 );

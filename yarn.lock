@@ -1006,10 +1006,10 @@ glob-to-regexp@0.4.1:
   resolved "https://registry.yarnpkg.com/glob-to-regexp/-/glob-to-regexp-0.4.1.tgz#c75297087c851b9a578bd217dd59a92f59fe546e"
   integrity sha512-lkX1HJXwyMcprw/5YUZc2s7DrpAiHB21/V+E1rHUrVNokkvB6bqMzT0VfV6/86ZNabt1k14YOIaT7nDvOX3Iiw==
 
-hono@^4.8.9:
-  version "4.8.9"
-  resolved "https://registry.yarnpkg.com/hono/-/hono-4.8.9.tgz#70626fa38d0ad69698e3573d1f84db97dae76b72"
-  integrity sha512-ERIxkXMRhUxGV7nS/Af52+j2KL60B1eg+k6cPtgzrGughS+espS9KQ7QO0SMnevtmRlBfAcN0mf1jKtO6j/doA==
+hono@^4.9.11:
+  version "4.9.11"
+  resolved "https://registry.yarnpkg.com/hono/-/hono-4.9.11.tgz#4d8488740e3f96bbe186ee7a60835852f3cfcc62"
+  integrity sha512-MyJ4xop3boTyXl8bJBh4i20AAZTLM3AXUJphyrUb0CpgTKYb1N703z53XiKUKchGUpcPqiiYkiLOXA3kqK3icA==
 
 is-arrayish@^0.3.1:
   version "0.3.2"

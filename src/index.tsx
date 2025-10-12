@@ -3,6 +3,21 @@ import { renderer } from "./renderer";
 
 const app = new Hono();
 app.use(renderer);
+const links = [
+  { url: "https://qlitre-dialy.ink/", desc: "日記サイト(HonoX)" },
+  { url: "https://qlitre-weblog.com/", desc: "プログラミングブログ(Nuxt.js)" },
+  { url: "https://atcoder.jp/users/Qlitre", desc: "AtCoder" },
+  { url: "https://twitter.com/kuri_tter", desc: "X / @kuri_tter" },
+  {
+    url: "https://home-loan-calculator.pages.dev/",
+    desc: "住宅ローン簡易計算サイト",
+  },
+  {
+    url: "https://recipes.qlitre.workers.dev/",
+    desc: " レシピ記録（HonoX mdx）",
+  },
+  { url: "https://meshi-log.info/", desc: "行った飯屋の記録" },
+];
 
 const Body = () => (
   <div>
@@ -18,69 +33,13 @@ const Body = () => (
     </ul>
     <h2>Link</h2>
     <ul>
-      <li>
-        <a
-          href="https://qlitre-dialy.ink/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          日記サイト(HonoX)
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://qlitre-weblog.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          プログラミングブログ(Nuxt.js)
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/qlitre"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GitHub
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://atcoder.jp/users/Qlitre"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          AtCoder
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://twitter.com/kuri_tter"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          X / @kuri_tter
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://home-loan-calculator.pages.dev/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          住宅ローン簡易計算サイト
-        </a>
-      </li>      
-      <li>
-        <a
-          href="https://recipes.qlitre.workers.dev/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          レシピ記録（HonoX mdx）
-        </a>
-      </li>      
+      {links.map((link) => (
+        <li>
+          <a href={link.url} target="_blank" rel="noopener noreferrer">
+            {link.desc}
+          </a>
+        </li>
+      ))}
     </ul>
   </div>
 );

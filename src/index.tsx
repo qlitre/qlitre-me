@@ -9,7 +9,7 @@ const links = [
   { url: "https://atcoder.jp/users/Qlitre", desc: "AtCoder" },
   { url: "https://twitter.com/kuri_tter", desc: "X / @kuri_tter" },
   {
-    url: "https://home-loan-calculator.pages.dev/",
+    url: "https://home-loan-calculator.qlitre.workers.dev/",
     desc: "住宅ローン簡易計算サイト",
   },
   {
